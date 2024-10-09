@@ -1,11 +1,9 @@
-#imports
 import chess
 import time
 import random
 
 #Pruning Alg
 def evaluate_board(board):
-    # Simple evaluation function: material count
     eval = 0
     for piece in board.piece_map().values():
         if piece.color == chess.WHITE:
@@ -106,7 +104,6 @@ if __name__ == "__main__":
 
 #Minimax alg
 def evaluate_board(board):
-    # Simple evaluation function: material count
     eval = 0
     for piece in board.piece_map().values():
         if piece.color == chess.WHITE:
@@ -193,7 +190,6 @@ import chess
 import chess.engine
 import chess.polyglot
 
-# A simple material evaluation function
 def evaluate_board(board):
     eval = 0
     piece_values = {
@@ -253,7 +249,6 @@ def calculate_accuracy(game_string):
 
     return accuracy / move_count
 
-# Example usage
 game_string = "insert game notation here"
 accuracy_score = calculate_accuracy(game_string)
 print(f"Accuracy Score: {accuracy_score}")
